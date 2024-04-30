@@ -107,12 +107,14 @@ rast <- function(inRaster) {
 ```{r read_Data}
 
 seattleMSA <- 
-  st_read("Kingcounty_boundary/Kingcounty.shp") %>%
+  st_read("SeattleMSA_boundary/SeattleMSA_boundary.shp") %>%
   st_transform('ESRI:102748') # JE Note: added 'ESRI:' in front of projection
 
 lc_2011 = raster("https://github.com/mafichman/CPLN_675/raw/main/Week_14_15/data/UGB_Chapter_data/resam4k.tif")
 
 lc_2021= raster("https://github.com/mafichman/CPLN_675/raw/main/Week_14_15/data/UGB_Chapter_data/resam4k.tif") 
+
+slope=raster("Slope/slope_SeattleMSA_1.tif")
 
 ```
 
